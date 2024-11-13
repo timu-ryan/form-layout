@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <section class="form-section">
+    <h1 class="form-section__header">Самый быстрый и продвинутый расчет банковской гарантии</h1>
+    <form class="form">
+      <fieldset>
+        <input type="number" id="inn" name="inn"/>
+        <input type="text" id="name" name="name"/>
+      </fieldset>
+      <fieldset>
+        <input type="text" id="name" name="name"/>
+      </fieldset>
+      <fieldset>
+        <select>
+          <option>44-ФЗ</option>
+          <option>223-ФЗ</option>
+          <option>615 ПП</option>
+          <option>КБГ</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <input type="number" id="notification" name="notification"/>
+        <input type="number" id="lot-number" name="lot-number"/>
+      </fieldset>
+      <fieldset>
+        <input type="checkbox" id="is-closed" />
+        <label for="is-closed">Закрытые торги</label>
+      </fieldset>
+      <fieldset>
+        <input type="number" id="bank-guarantee-amount" name="bank-guarantee-amount"/>
+        <input type="number" id="currency" name="currency"/>
+      </fieldset>
+      <fieldset>
+        <input type="checkbox" id="nmzck" />
+        <label for="nmzck">Снижение НМЦК более 25%</label>
+      </fieldset>
+      <fieldset>
+        <input type="date" id="bank-guarantee-term" name="bank-guarantee-term"/>
+        <input type="number" id="day-number" name="day-number"/>
+      </fieldset>
+      <fieldset>
+        <input type="checkbox" id="advance-payment" />
+        <label for="advance-payment">Наличие аванса</label>
+      </fieldset>
+      <fieldset>
+        <input type="number" id="contract-percentage" name="contract-percentage"/>
+      </fieldset>
+      <fieldset>
+        <input type="checkbox" id="customer-template" />
+        <label for="customer-template">БГ по шаблону Заказчика</label>
+      </fieldset>
+      <fieldset>
+        <input type="number" id="experience-44" name="experience-44"/>
+        <input type="number" id="experience-223" name="experience-223"/>
+      </fieldset>
+      <button>Рассчитать</button>
+    </form>
+    <section class="search-data">
+      <h2>Закупка:</h2>
+      <p>№ закупки: 32414110847</p>
+      <p>Наименование закупки:</p>
+      <p>
+        Маркетинговое исследование в электронной форме на право заключения 
+        договора на выполнение работ на объекте: «Реконструкция напорного 
+        коллектора Д=600 мм по улице Новосортировочной от КНС-10 по улице 
+        Гуртьева до улицы Д.Бедного (Инв.№3010978А телевиз. з-да от д/к 
+        Радуга пр14)», проводимое централизованно ООО УК "РОСВОДОКАНАЛ" для 
+        нужд АО "ОмскВодоканал"
+      </p>
+      <p>НМЦ: 76 785 294,07 руб.</p>
+      <h2>Поставщик:</h2>
+      <p>Дата регистрации: <time datetime="2016-09-27">27.09.2016</time></p>
+    </section>
+  </section>
+</body>
+</html>

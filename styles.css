@@ -1,0 +1,12 @@
+.form-section {
+  margin: 56px 59px 56px 63px;
+  display: grid;
+  column-gap: 82px;
+  row-gap: 46px;
+  grid-template-columns: 3fr 2fr;
+}
+
+.form-section__header {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
