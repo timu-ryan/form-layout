@@ -11,11 +11,11 @@
     <h1 class="form-section__header">Самый быстрый и продвинутый расчет банковской гарантии</h1>
     <form class="form">
       <fieldset>
-        <input type="number" id="inn" name="inn"/>
-        <input type="text" id="name" name="name"/>
+        <input type="number" id="inn" name="inn" placeholder="ИНН клиента" />
+        <input type="text" id="name" name="name" placeholder="Название юр.лица" />
       </fieldset>
       <fieldset>
-        <input type="text" id="name" name="name"/>
+        <input type="text" id="name" name="name" placeholder="Вид банковской гарантии"/>
       </fieldset>
       <fieldset>
         <div class="option-container">
@@ -25,39 +25,39 @@
         </div>
       </fieldset>
       <fieldset>
-        <input type="number" id="notification" name="notification"/>
-        <input type="number" id="lot-number" name="lot-number"/>
+        <input type="number" id="notification" name="notification" placeholder="№ извещения"/>
+        <input type="number" id="lot-number" name="lot-number" placeholder="№ лота"/>
       </fieldset>
       <fieldset>
         <input type="checkbox" id="is-closed" />
         <label for="is-closed">Закрытые торги</label>
       </fieldset>
       <fieldset>
-        <input type="number" id="bank-guarantee-amount" name="bank-guarantee-amount"/>
-        <input type="number" id="currency" name="currency"/>
+        <input type="number" id="bank-guarantee-amount" name="bank-guarantee-amount" placeholder="Сумма банковской гарантии*"/>
+        <input type="number" id="currency" name="currency" placeholder="руб."/>
       </fieldset>
       <fieldset>
         <input type="checkbox" id="nmzck" />
         <label for="nmzck">Снижение НМЦК более 25%</label>
       </fieldset>
       <fieldset>
-        <input type="date" id="bank-guarantee-term" name="bank-guarantee-term"/>
-        <input type="number" id="day-number" name="day-number"/>
+        <input type="date" id="bank-guarantee-term" name="bank-guarantee-term" placeholder="Срок банковской гарантии*"/>
+        <input type="number" id="day-number" name="day-number" placeholder="80 дней"/>
       </fieldset>
       <fieldset>
         <input type="checkbox" id="advance-payment" />
         <label for="advance-payment">Наличие аванса</label>
       </fieldset>
       <fieldset>
-        <input type="number" id="contract-percentage" name="contract-percentage"/>
+        <input type="number" id="contract-percentage" name="contract-percentage" placeholder="% от цены контракта"/>
       </fieldset>
       <fieldset>
         <input type="checkbox" id="customer-template" />
         <label for="customer-template">БГ по шаблону Заказчика</label>
       </fieldset>
       <fieldset>
-        <input type="number" id="experience-44" name="experience-44"/>
-        <input type="number" id="experience-223" name="experience-223"/>
+        <input type="number" id="experience-44" name="experience-44" placeholder="Опыт по 44-ФЗ (кол-во контрактов)"/>
+        <input type="number" id="experience-223" name="experience-223" placeholder="Опыт по 223-ФЗ (кол-во контрактов)"/>
       </fieldset>
       <button>Рассчитать</button>
     </form>
