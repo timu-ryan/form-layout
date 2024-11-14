@@ -15,7 +15,7 @@
         <input class="form__input" type="text" id="name" name="name" placeholder="Название юр.лица" />
       </fieldset>
       <fieldset class="form__fieldset">
-        <input class="form__input" type="text" id="name" name="name" placeholder="Вид банковской гарантии"/>
+        <input class="form__input" type="text" id="guarantee-type" name="guarantee-type" placeholder="Вид банковской гарантии"/>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_miltiple">
           <label class="form__input"><input type="radio" name="option" value="1">44-ФЗ</label>
@@ -24,7 +24,7 @@
           <label class="form__input"><input type="radio" name="option" value="4">КБГ</label>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_right">
-        <input class="form__input" type="number" id="notification" name="notification" placeholder="№ извещения"/>
+        <input class="form__input" type="number" id="notification-num" name="notification-num" placeholder="№ извещения"/>
         <input class="form__input" type="number" id="lot-number" name="lot-number" placeholder="№ лота"/>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_checkbox">
@@ -64,7 +64,7 @@
         <input class="form__input" type="number" id="experience-223" name="experience-223" placeholder="Опыт по 223-ФЗ (кол-во контрактов)"/>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_left">
-        <input class="form__input form__input_type_button" type="button" id="contract-percentage" name="contract-percentage" value="Рассчитать"/>
+        <input class="form__input form__input_type_button" type="button" id="submit" value="Рассчитать"/>
       </fieldset>
     </form>
     <section class="search-data">
@@ -84,5 +84,6 @@
       <p>Дата регистрации: <time datetime="2016-09-27">27.09.2016</time></p>
     </section>
   </section>
+  <script src="./script.js"></script>
 </body>
 </html>
