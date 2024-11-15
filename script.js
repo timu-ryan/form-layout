@@ -98,7 +98,8 @@ async function fetchData(urls) {
     console.log(combinedJson);
     return combinedJson;
   } catch (err) {
-    console.error('Error fetching data:', error);
+    alert(`ошибка, возможно не запущен сервер\n${err}`)
+    console.error('Error fetching data:', err);
   }
 }
 
