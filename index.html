@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./fonts/fonts.css">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -25,7 +24,7 @@
           <option value="val4">Гарантия качества (гарантийные обязательства)</option>
         </select>
       </fieldset>
-      <fieldset class="form__fieldset form__fieldset_split_miltiple">
+      <fieldset class="form__fieldset form__fieldset_split_four">
           <label class="form__input">
             <input class="visually-hidden" type="radio" name="option" value="1">
             <span></span>
@@ -69,15 +68,21 @@
           Снижение НМЦК более 25%
         </label>
       </fieldset>
-      <fieldset class="form__fieldset form__fieldset_split_right">
+      <fieldset class="form__fieldset form__fieldset_split_three">
         <input placeholder="Срок банковской гарантии*" class="form__input" type="text"
           onfocus="(this.type='date')"
           onblur="(this.type='text')"
-          id="bank-guarantee-term" 
-          name="bank-guarantee-term" 
+          id="bank-guarantee-term-start" 
+          name="bank-guarantee-term-start" 
+          disabled/>
+        <input placeholder="Срок банковской гарантии*" class="form__input" type="text"
+          onfocus="(this.type='date')"
+          onblur="(this.type='text')"
+          id="bank-guarantee-term-end" 
+          name="bank-guarantee-term-end" 
           disabled/>
         <!-- <input class="form__input" type="date" id="bank-guarantee-term" name="bank-guarantee-term" placeholder="Срок банковской гарантии*"/> -->
-        <input class="form__input" type="number" id="day-number" name="day-number" placeholder="80 дней" disabled/>
+        <input class="form__input" id="day-number" name="day-number" placeholder="- дней" disabled/>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_checkbox">
         <label for="advance-payment">

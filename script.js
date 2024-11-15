@@ -5,7 +5,9 @@ const button = document.querySelector('#submit');
 
 const bankGuaranteeAmountInput = document.querySelector('#bank-guarantee-amount');
 const currencyInput = document.querySelector('#currency');
-const bankGuaranteeTermInput = document.querySelector('#bank-guarantee-term');
+const bankGuaranteeTermStartInput = document.querySelector('#bank-guarantee-term-start');
+const bankGuaranteeTermEndInput = document.querySelector('#bank-guarantee-term-end');
+const dayDifferenceNumberInput = document.querySelector('#day-number');
 const contractPercentageInput = document.querySelector('#contract-percentage');
 const experience44Input = document.querySelector('#experience-44');
 const experience223Input = document.querySelector('#experience-223');
@@ -32,7 +34,19 @@ isClosedCheckbox.addEventListener('change', () => {
 })
 
 nmzckCheckbox.addEventListener('change', () => {
-  toggleInputAvailability(nmzckCheckbox, bankGuaranteeTermInput);
+  toggleInputAvailability(nmzckCheckbox, bankGuaranteeTermStartInput);
+  toggleInputAvailability(nmzckCheckbox, bankGuaranteeTermEndInput);
+})
+
+bankGuaranteeTermStartInput.addEventListener('change', () => {
+  const startDate = bankGuaranteeTermStartInput.value;
+  bankGuaranteeTermEndInput.min = startDate;
+  // console.log(startDate);
+  calculateDateDifference(bankGuaranteeTermStartInput, bankGuaranteeTermEndInput, dayDifferenceNumberInput);
+})
+
+bankGuaranteeTermEndInput.addEventListener('change', () => {
+  calculateDateDifference(bankGuaranteeTermStartInput, bankGuaranteeTermEndInput, dayDifferenceNumberInput);
 })
 
 advancePaymentCheckbox.addEventListener('change', () => {
@@ -95,7 +109,7 @@ async function fetchData(urls) {
     // Map each response to JSON data
     const data = await Promise.all(responses.map(response => response.json()));
     const combinedJson = {...data[0], ...data[1]}
-    console.log(combinedJson);
+    // console.log(combinedJson);
     return combinedJson;
   } catch (err) {
     alert(`ошибка, возможно не запущен сервер\n${err}`)
@@ -112,6 +126,30 @@ function formatPrice(price) {
     decimalPart += "0";
   }
   return `${integerPart},${decimalPart}`;
+}
+
+function calculateDateDifference(startDateInput, endDateInput, resultInput) {
+  if (!startDateInput || !endDateInput) {
+    resultInput.value = "Выберите даты";
+    return;
+  }
+
+  const startDate = new Date(startDateInput.value);
+  const endDate = new Date(endDateInput.value);
+  if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+    resultInput.value = "введите вторую дату";
+    return;
+  }
+
+  if (startDate > endDate) {
+    resultInput.value = "начальная должна быть раньше конечной";
+    return;
+  }
+
+  const differenceInTime = endDate - startDate;
+  const differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
+
+  resultInput.value = `${differenceInDays} дней`;
 }
 
 // fetch(`http://localhost:3000/proxy?inn=${inn}`)

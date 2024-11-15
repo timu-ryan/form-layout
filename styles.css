@@ -73,7 +73,11 @@ p, label {
   grid-template-columns: 2fr 1fr;
 }
 
-.form__fieldset_split_miltiple {
+.form__fieldset_split_three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.form__fieldset_split_four {
   grid-template-columns: repeat(4, 1fr);
 }
 
