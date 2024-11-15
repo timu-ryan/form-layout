@@ -15,7 +15,14 @@
         <input class="form__input" type="text" id="name" name="name" placeholder="Название юр.лица" disabled/>
       </fieldset>
       <fieldset class="form__fieldset">
-        <input class="form__input" type="text" id="guarantee-type" name="guarantee-type" placeholder="Вид банковской гарантии"/>
+        <!-- <input class="form__input" type="text" id="guarantee-type" name="guarantee-type" placeholder="Вид банковской гарантии"/> -->
+        <select name="search" class="form__input">
+          <option value="" selected disabled hidden>Вид банковской гарантии</option>
+          <option value="val1">Гарантия исполнения контракта</option>
+          <option value="val2">Гарантия на участке (тендерная)</option>
+          <option value="val3">Гарантия возврата аванса</option>
+          <option value="val4">Гарантия качества (гарантийные обязательства)</option>
+        </select>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_miltiple">
           <label class="form__input">
