@@ -65,6 +65,7 @@ function getObject(text) {
   return text.slice(index + objectSearch.length, lastIndex);
 }
 
+// поиск объекта начальной цены в разметке
 function getNmc(text) {
   const objectSearch = '<div class="price-block__value"'
 

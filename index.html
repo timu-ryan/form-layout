@@ -11,77 +11,101 @@
     <h1 class="form-section__header">Самый быстрый и продвинутый расчет банковской гарантии</h1>
     <form class="form">
       <fieldset class="form__fieldset form__fieldset_split_left">
-        <input class="form__input" type="number" id="inn" name="inn" placeholder="ИНН клиента" />
-        <input class="form__input" type="text" id="name" name="name" placeholder="Название юр.лица" />
+        <input class="form__input" type="number" id="inn" name="inn" placeholder="ИНН клиента"/>
+        <input class="form__input" type="text" id="name" name="name" placeholder="Название юр.лица" disabled/>
       </fieldset>
       <fieldset class="form__fieldset">
         <input class="form__input" type="text" id="guarantee-type" name="guarantee-type" placeholder="Вид банковской гарантии"/>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_miltiple">
-          <label class="form__input"><input type="radio" name="option" value="1">44-ФЗ</label>
-          <label class="form__input"><input type="radio" name="option" value="2">223-ФЗ</label>
-          <label class="form__input"><input type="radio" name="option" value="3">615 ПП</label>
-          <label class="form__input"><input type="radio" name="option" value="4">КБГ</label>
+          <label class="form__input">
+            <input class="visually-hidden" type="radio" name="option" value="1">
+            <span></span>
+            44-ФЗ
+          </label>
+          <label class="form__input">
+            <input class="visually-hidden" type="radio" name="option" value="2">
+            <span></span>
+            223-ФЗ
+          </label>
+          <label class="form__input">
+            <input class="visually-hidden" type="radio" name="option" value="3">
+            <span></span>
+            615 ПП
+          </label>
+          <label class="form__input">
+            <input class="visually-hidden" type="radio" name="option" value="4">
+            <span></span>
+            КБГ
+          </label>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_right">
         <input class="form__input" type="number" id="notification-num" name="notification-num" placeholder="№ извещения"/>
         <input class="form__input" type="number" id="lot-number" name="lot-number" placeholder="№ лота"/>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_checkbox">
-        <input class="form__input form__input_type_checkbox" type="checkbox" id="is-closed" />
-        <label for="is-closed">Закрытые торги</label>
+        <label for="is-closed">
+          <input class="form__input form__input_type_checkbox visually-hidden" type="checkbox" id="is-closed" />
+          <span></span>
+          Закрытые торги
+        </label>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_right">
-        <input class="form__input" type="number" id="bank-guarantee-amount" name="bank-guarantee-amount" placeholder="Сумма банковской гарантии*"/>
-        <input class="form__input" type="number" id="currency" name="currency" placeholder="руб."/>
+        <input class="form__input" type="number" id="bank-guarantee-amount" name="bank-guarantee-amount" placeholder="Сумма банковской гарантии*" disabled/>
+        <input class="form__input" type="number" id="currency" name="currency" placeholder="руб." disabled/>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_checkbox">
-        <input class="form__input form__input_type_checkbox" type="checkbox" id="nmzck" />
-        <label for="nmzck">Снижение НМЦК более 25%</label>
+        <label for="nmzck">
+          <input class="form__input form__input_type_checkbox visually-hidden" type="checkbox" id="nmzck" />
+          <span></span>
+          Снижение НМЦК более 25%
+        </label>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_right">
         <input placeholder="Срок банковской гарантии*" class="form__input" type="text"
           onfocus="(this.type='date')"
           onblur="(this.type='text')"
           id="bank-guarantee-term" 
-          name="bank-guarantee-term" />
+          name="bank-guarantee-term" 
+          disabled/>
         <!-- <input class="form__input" type="date" id="bank-guarantee-term" name="bank-guarantee-term" placeholder="Срок банковской гарантии*"/> -->
-        <input class="form__input" type="number" id="day-number" name="day-number" placeholder="80 дней"/>
+        <input class="form__input" type="number" id="day-number" name="day-number" placeholder="80 дней" disabled/>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_checkbox">
-        <input class="form__input form__input_type_checkbox" type="checkbox" id="advance-payment" />
-        <label for="advance-payment">Наличие аванса</label>
+        <label for="advance-payment">
+          <input class="form__input form__input_type_checkbox visually-hidden" type="checkbox" id="advance-payment" />
+          <span></span>
+          Наличие аванса
+        </label>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_left">
-        <input class="form__input" type="number" id="contract-percentage" name="contract-percentage" placeholder="% от цены контракта"/>
+        <input class="form__input" type="number" min="0" max="100" id="contract-percentage" name="contract-percentage" placeholder="% от цены контракта" disabled/>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_checkbox">
-        <input class="form__input form__input_type_checkbox" type="checkbox" id="customer-template" />
-        <label for="customer-template">БГ по шаблону Заказчика</label>
+        <label for="customer-template">
+          <input class="form__input form__input_type_checkbox visually-hidden" type="checkbox" id="customer-template" />
+          <span></span>
+          БГ по шаблону Заказчика
+        </label>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_middle">
-        <input class="form__input" type="number" id="experience-44" name="experience-44" placeholder="Опыт по 44-ФЗ (кол-во контрактов)"/>
-        <input class="form__input" type="number" id="experience-223" name="experience-223" placeholder="Опыт по 223-ФЗ (кол-во контрактов)"/>
+        <input class="form__input" type="number" id="experience-44" name="experience-44" placeholder="Опыт по 44-ФЗ (кол-во контрактов)" disabled/>
+        <input class="form__input" type="number" id="experience-223" name="experience-223" placeholder="Опыт по 223-ФЗ (кол-во контрактов)" disabled/>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_split_left">
         <input class="form__input form__input_type_button" type="button" id="submit" value="Рассчитать"/>
+        <p class="form__hint visually-hidden">Заполните поля ИНН и № извещения<br/>Например: 0278922311 и 32414110847 соотв.</p>
       </fieldset>
     </form>
     <section class="search-data">
       <h2>Закупка:</h2>
-      <p>№ закупки: 32414110847</p>
+      <p>№ закупки: <span></span></p>
       <p>Наименование закупки:</p>
-      <p>
-        Маркетинговое исследование в электронной форме на право заключения 
-        договора на выполнение работ на объекте: «Реконструкция напорного 
-        коллектора Д=600 мм по улице Новосортировочной от КНС-10 по улице 
-        Гуртьева до улицы Д.Бедного (Инв.№3010978А телевиз. з-да от д/к 
-        Радуга пр14)», проводимое централизованно ООО УК "РОСВОДОКАНАЛ" для 
-        нужд АО "ОмскВодоканал"
-      </p>
-      <p>НМЦ: 76 785 294,07 руб.</p>
+      <p></p>
+      <p>НМЦ: <span></span> руб.</p>
       <h2>Поставщик:</h2>
-      <p>Дата регистрации: <time datetime="2016-09-27">27.09.2016</time></p>
+      <p>Дата регистрации: <time datetime="2016-09-27"></time></p>
+      <div class="loader visually-hidden"></div> 
     </section>
   </section>
   <script src="./script.js"></script>
